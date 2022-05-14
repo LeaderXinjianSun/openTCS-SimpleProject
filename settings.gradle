@@ -1,0 +1,12 @@
+rootProject.name = 'openTCS-SimpleProject'
+
+include 'openTCS-Contrib-Communication-TCP'
+include 'openTCS-SimpleProject-CommAdapter-Vehicle'
+include 'openTCS-SimpleProject-Common'
+include 'openTCS-SimpleProject-Documentation'
+include 'openTCS-SimpleProject-Kernel'
+include 'openTCS-SimpleProject-KernelControlCenter'
+include 'openTCS-SimpleProject-KernelExtension-Statistics'
+include 'openTCS-SimpleProject-ModelEditor'
+include 'openTCS-SimpleProject-OperationsDesk'
+include 'openTCS-SimpleProject-OperationsDesk-Panel-Statistics'

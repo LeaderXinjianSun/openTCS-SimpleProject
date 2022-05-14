@@ -1,0 +1,121 @@
+buildscript {
+  repositories {
+    maven {
+      url "https://maven.aliyun.com/repository/public/"
+    }
+    mavenCentral()
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+  dependencies {
+    // License plugin
+    classpath 'gradle.plugin.nl.javadude.gradle.plugins:license-gradle-plugin:0.14.0'
+    // Stats plugin
+    classpath 'org.kordamp.gradle:stats-gradle-plugin:0.2.2'
+  }
+}
+
+apply plugin: 'base'
+apply plugin: 'distribution'
+
+
+apply from: "${rootDir}/gradle/common.gradle"
+apply from: "${rootDir}/gradle/publishing-common.gradle"
+
+evaluationDependsOnChildren()
+
+subprojects {
+  apply from: rootProject.file('gradle/common.gradle')
+  apply from: rootProject.file('gradle/publishing-java.gradle')
+}
+
+distributions {
+  main {
+    contents.from {
+      project(':openTCS-SimpleProject-Kernel').ext.collectableDistDir
+    }
+    contents.from {
+      project(':openTCS-SimpleProject-KernelControlCenter').ext.collectableDistDir
+    }
+    contents.from {
+      project(':openTCS-SimpleProject-ModelEditor').ext.collectableDistDir
+    }
+    contents.from {
+      project(':openTCS-SimpleProject-OperationsDesk').ext.collectableDistDir
+    }
+    contents.from {
+      project(':openTCS-SimpleProject-Documentation').ext.collectableDistDir
+    }
+  }
+}
+
+task statsAggregate(type: org.kordamp.gradle.stats.AggregateStatsReportTask) {
+  dependsOn subprojects*.stats
+}
+
+task subDists {
+  dependsOn(':openTCS-SimpleProject-Kernel:installDist')
+  dependsOn(':openTCS-SimpleProject-KernelControlCenter:installDist')
+  dependsOn(':openTCS-SimpleProject-ModelEditor:installDist')
+  dependsOn(':openTCS-SimpleProject-OperationsDesk:installDist')
+  dependsOn(':openTCS-SimpleProject-Documentation:installDist')
+}
+
+installDist.dependsOn subDists
+
+distZip {
+  classifier = 'bin'
+  dependsOn subDists
+}
+
+distTar {
+  classifier = 'bin'
+  dependsOn subDists
+  compression = Compression.GZIP
+}
+
+task distSrcZip(type: Zip) {
+  classifier = 'src'
+  from "${rootDir}"
+
+  includes << 'config/**'
+  includes << 'gradle/**'
+  includes << 'lib/**'
+  includes << 'openTCS-*/**'
+  includes << 'src/**'
+  includes << '.nb-gradle-properties'
+  includes << '*.gradle'
+  includes << 'gradlew'
+  includes << 'gradlew.bat'
+  includes << 'README.md'
+
+  excludes << '.gradle'
+  excludes << '**/build'
+}
+
+artifacts {
+  archives distZip
+  archives distTar
+  archives distSrcZip
+}
+
+build {
+  dependsOn subprojects*.build
+  dependsOn installDist
+}
+
+publish.dependsOn subprojects*.publish
+
+publishing {
+  publications {
+    maven(MavenPublication) {
+      artifact distZip
+      artifact distSrcZip
+
+      pom {
+        artifactId = 'distribution'
+      }
+    }
+  }
+}

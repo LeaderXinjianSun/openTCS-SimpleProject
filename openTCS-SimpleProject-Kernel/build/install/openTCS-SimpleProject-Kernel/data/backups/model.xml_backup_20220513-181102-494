@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model version="0.0.4" name="unnamed">
+    <visualLayout name="VLayout" scaleX="50.0" scaleY="50.0">
+        <layer id="0" ordinal="0" visible="true" name="Default layer" groupId="0"/>
+        <layerGroup id="0" name="Default layer group" visible="true"/>
+    </visualLayout>
+</model>

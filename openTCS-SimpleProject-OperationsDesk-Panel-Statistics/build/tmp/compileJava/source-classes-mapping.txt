@@ -1,0 +1,30 @@
+com/sxj/operationsdesk/panels/statistics/StatisticsPanel.java
+ com.sxj.operationsdesk.panels.statistics.StatisticsPanel
+ com.sxj.operationsdesk.panels.statistics.StatisticsPanel$1
+com/sxj/operationsdesk/panels/statistics/VehiclesTableModel.java
+ com.sxj.operationsdesk.panels.statistics.VehiclesTableModel
+com/sxj/operationsdesk/panels/statistics/StatisticsPanelConfiguration.java
+ com.sxj.operationsdesk.panels.statistics.StatisticsPanelConfiguration
+com/sxj/operationsdesk/panels/statistics/VehicleStats.java
+ com.sxj.operationsdesk.panels.statistics.VehicleStats
+com/sxj/operationsdesk/panels/statistics/Stats.java
+ com.sxj.operationsdesk.panels.statistics.Stats
+com/sxj/operationsdesk/panels/statistics/I18nPlantOverviewPanelStatistics.java
+ com.sxj.operationsdesk.panels.statistics.I18nPlantOverviewPanelStatistics
+com/sxj/operationsdesk/panels/statistics/package-info.java
+ com.sxj.operationsdesk.panels.statistics.package-info
+com/sxj/operationsdesk/panels/statistics/OrdersTableModel.java
+ com.sxj.operationsdesk.panels.statistics.OrdersTableModel
+com/sxj/operationsdesk/panels/statistics/PointsTableModel.java
+ com.sxj.operationsdesk.panels.statistics.PointsTableModel
+com/sxj/operationsdesk/panels/statistics/PointStats.java
+ com.sxj.operationsdesk.panels.statistics.PointStats
+com/sxj/operationsdesk/panels/statistics/TimePeriodFormat.java
+ com.sxj.operationsdesk.panels.statistics.TimePeriodFormat
+com/sxj/operationsdesk/panels/statistics/AnalysisData.java
+ com.sxj.operationsdesk.panels.statistics.AnalysisData
+ com.sxj.operationsdesk.panels.statistics.AnalysisData$1
+com/sxj/operationsdesk/panels/statistics/StatisticsPanelFactory.java
+ com.sxj.operationsdesk.panels.statistics.StatisticsPanelFactory
+com/sxj/operationsdesk/panels/statistics/OrderStats.java
+ com.sxj.operationsdesk.panels.statistics.OrderStats

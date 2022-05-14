@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="D:/gradle-4.10.3" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/openTCS-Contrib-Communication-TCP" />
+            <option value="$PROJECT_DIR$/openTCS-SimpleProject-CommAdapter-Vehicle" />
+            <option value="$PROJECT_DIR$/openTCS-SimpleProject-Common" />
+            <option value="$PROJECT_DIR$/openTCS-SimpleProject-Documentation" />
+            <option value="$PROJECT_DIR$/openTCS-SimpleProject-Kernel" />
+            <option value="$PROJECT_DIR$/openTCS-SimpleProject-KernelControlCenter" />
+            <option value="$PROJECT_DIR$/openTCS-SimpleProject-KernelExtension-Statistics" />
+            <option value="$PROJECT_DIR$/openTCS-SimpleProject-ModelEditor" />
+            <option value="$PROJECT_DIR$/openTCS-SimpleProject-OperationsDesk" />
+            <option value="$PROJECT_DIR$/openTCS-SimpleProject-OperationsDesk-Panel-Statistics" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

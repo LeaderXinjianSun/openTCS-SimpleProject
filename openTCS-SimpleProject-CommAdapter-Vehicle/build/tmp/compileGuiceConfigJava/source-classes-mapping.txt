@@ -1,0 +1,4 @@
+com/sxj/commadapter/vehicle/SimpleControlCenterInjectionModule.java
+ com.sxj.commadapter.vehicle.SimpleControlCenterInjectionModule
+com/sxj/commadapter/vehicle/SimpleKernelInjectionModule.java
+ com.sxj.commadapter.vehicle.SimpleKernelInjectionModule
